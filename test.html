@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PixiJS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <script src="libs/pixi.js"></script>
+    <body>
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+
+        <script type="text/javascript">
+            let type = "WebGL"
+            if(!PIXI.utils.isWebGLSupported()){
+                type = "canvas"
+            }
+        
+            PIXI.utils.sayHello(type)
+        </script>
+
+        <script>
+            //Create a Pixi Application
+            let app = new PIXI.Application({width: 256, height: 256});
+
+            //Add the canvas that Pixi automatically created for you to the HTML document
+            document.body.appendChild(app.view);
+
+            
+        </script>
+
+    </body>
+</html>
